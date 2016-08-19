@@ -70,7 +70,7 @@
         <i class="flag icon"></i>&nbsp;
         {{ trans('app.league') }}
       </a>
-      <a class="item">
+      <a class="item" href="{{ route('admin.teams.index') }}">
         <i class="linux icon"></i>&nbsp;
         {{ trans('app.team') }}
       </a>

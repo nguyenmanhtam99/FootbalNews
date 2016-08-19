@@ -13,6 +13,11 @@ class Team extends Model
         'description',
     ];
 
+    public function country()
+    {
+        return $this->belongsTo(Country::class);
+    }
+
     public function players()
     {
         return $this->hasMany(Player::class);
