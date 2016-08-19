@@ -20,6 +20,7 @@ Route::group(['middleware' => 'web'], function () {
             'as' => 'admin.welcome',
             'uses' => 'HomeController@welcome'
         ]);
+        Route::resource('teams', 'Admin\TeamController');
     });
     Route::group(['prefix' => 'users', 'namespace' => 'User'], function () {
         Route::get('/', [
@@ -28,5 +29,6 @@ Route::group(['middleware' => 'web'], function () {
         ]);
         Route::resource('news', 'NewController');
         Route::resource('matches', 'MatchController', ['only' => ['index', 'show']]);
+
     });
 });
